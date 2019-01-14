@@ -1,4 +1,4 @@
 <h3>List of Cars</h3>
 <%@cars.each do|car|%>
-<p> Brand: <%=car.brand %>  Color: <%=car.color %>  Model: <%=car.model %></p>
+<p><%= link_to "Brand: #{car.brand} Color: #{car.color} Model: #{car.model}", car_path(car) %></p>
 <%end%>

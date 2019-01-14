@@ -1,0 +1,10 @@
+<h3>Edit Car Form</h3>
+<%= form_for(@car) do |f|%>
+<%= f.label :brand %>
+<%= f.text_field :brand %>
+<%= f.label :color %>
+<%= f.text_field :color %>
+<%= f.label :model %>
+<%= f.text_field :model %>
+<%= f.submit "Edit Me"%>
+<%end%>

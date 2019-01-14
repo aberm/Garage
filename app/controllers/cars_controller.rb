@@ -21,12 +21,19 @@ class CarsController < ApplicationController
   end
 
   def edit
+    @car = Car.find(params[:id])
+    render :edit
   end
 
   def update
+    @car = Car.find(params[:id])
+    @car.update(strong_params(:brand,:color,:model))
+    redirect_to car_path(@car)
   end
 
   def destroy
+    @car = Car.find(params[:id]).destroy
+    redirect_to "/cars"
   end
 
   private

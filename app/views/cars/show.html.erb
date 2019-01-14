@@ -2,3 +2,9 @@
 <p> Brand: <%=@car.brand %> </p>
 <p> Color: <%=@car.color %> </p>
 <p> Model: <%=@car.model %> </p>
+
+<p><%= link_to "Edit Car", edit_path(@car) %></p>
+
+<%= form_tag car_path(@car), method: "delete" do %>
+  <%= submit_tag "Delete" %>
+<% end %>
